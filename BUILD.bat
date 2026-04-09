@@ -30,6 +30,7 @@ echo Building with Nuitka (this takes a few minutes)...
 echo.
 python -m nuitka ^
     --standalone ^
+    --onefile ^
     --windows-console-mode=disable ^
     --windows-icon-from-ico=icon.ico ^
     --enable-plugin=tk-inter ^
@@ -39,6 +40,7 @@ python -m nuitka ^
     --include-data-files=optimizationlock_gameinfo.gi=optimizationlock_gameinfo.gi ^
     --output-filename=Yewds_Optimizer.exe ^
     optimizationlock_gui.py
+
 echo.
 if exist "Yewds_Optimizer.exe" (
     echo ════════════════════════════════════════
